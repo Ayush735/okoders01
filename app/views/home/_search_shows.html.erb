@@ -1,8 +1,8 @@
 <%if @shows.present?%>
-  <%@shows.each do |showw|%>
+  <%@shows.each do |show|%>
     <div class="col-lg-3 shows-list">
       <span>
-        <b>Channel Name:</b> <%= showw.channel.name%>
+        <b>Channel Name:</b> <%= show.channel.name%>
       </span>
       <div>
         <span>
@@ -10,9 +10,9 @@
         </span>
         <ul>
           <li>
-            <%=showw.name%><br>
+            <%=show.name%><br>
             <span>
-              <small><%=showw.start_at.strftime("%H:%M %P") %> -to-<%= showw.end_at.strftime("%H:%M %P") %></small>
+              <small><%=show.start_at.strftime("%H:%M %P") %> -to-<%= show.end_at.strftime("%H:%M %P") %></small>
             </span><br>
             <%if current_user.present?%>
               <span>
